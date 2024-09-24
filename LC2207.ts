@@ -46,3 +46,13 @@ function maximumSubsequenceCount(text: string, pattern: string): number {
   }
   return res + Math.max(cnt1, cnt2);
 };
+
+// 思路与算法
+
+// 遍历字符串，并且同时统计两个字符出现的频数。如果遇见 pattern[1]，就可以和前面出现过的 pattern[0] 组成子序列。
+
+// 然后我们插入字符：
+
+// 如果加上 pattern[0]， 就加在字符串开头，与字符串中的 pattern[1] 组成新的子序列。
+// 如果加上 pattern[1]， 就加在字符串结尾，与字符串中的 pattern[0] 组成新的子序列。
+// 最终新增的子字符串数量为两个字符频数的最大值，加到结果中并返回。
