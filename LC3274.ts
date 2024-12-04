@@ -48,3 +48,7 @@ function checkTwoChessboards(coordinate1: string, coordinate2: string): boolean 
   } 
   return false;
 };
+
+function checkTwoChessboards2(coordinate1: string, coordinate2: string): boolean {
+  return (coordinate1.charCodeAt(0) - coordinate2.charCodeAt(0) + coordinate1.charCodeAt(1) - coordinate2.charCodeAt(1)) % 2 === 0;
+};
