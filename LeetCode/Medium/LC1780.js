@@ -37,3 +37,15 @@ var checkPowersOfThree = function (n) {
 checkPowersOfThree(12); // true
 checkPowersOfThree(91); // true
 checkPowersOfThree(21); // false
+
+/** official solution
+ * var checkPowersOfThree = function(n) {
+    while (n !== 0) {
+        if (n % 3 === 2) {
+            return false;
+        }
+        n = Math.floor(n / 3);
+    }
+    return true;
+  };
+*/
